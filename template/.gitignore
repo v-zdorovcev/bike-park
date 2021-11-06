@@ -4,4 +4,3 @@
 *.psd
 node_modules/
 npm-debug.*
-build/

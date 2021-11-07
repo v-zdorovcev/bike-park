@@ -1,6 +1,4 @@
 import gulp from 'gulp';
-import del from 'del';
-import newer from 'gulp-newer';
 import plumber from 'gulp-plumber';
 import concat from 'gulp-concat';
 import rename from 'gulp-rename';
@@ -12,28 +10,28 @@ import autoprefixer from 'autoprefixer';
 import objectFit from 'postcss-object-fit-images';
 import minify from 'gulp-csso';
 import uglify from 'gulp-uglify';
-import server from 'browser-sync';
+import sync from 'browser-sync';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 
 const sass = gulpSass(dartSass);
 
-export const clean = () => {
-  return del('build');
-};
-
 export const copy = () => {
   return gulp
-    .src(['src/assets/fonts/**/*.{woff,woff2}', 'src/assets/img/*.webp', 'src/js/*'], {
+    .src(['src/fonts/**/*.{woff,woff2}', 'src/img/*.webp', 'src/js/*'], {
       base: 'src',
     })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
+    .pipe(
+      sync.stream({
+        once: true,
+      }),
+    );
 };
 
 export const images = () => {
   return gulp
-    .src(['src/assets/img/**/*.{png,jpg,svg}', '!src/assets/icons/sprite/*.svg'])
-    .pipe(newer('build/img'))
+    .src(['src/img/**/*.{png,jpg,svg}', '!src/icons/sprite/*.svg'])
     .pipe(
       imagemin([
         imagemin.optipng({
@@ -51,12 +49,13 @@ export const images = () => {
         }),
       ]),
     )
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img'))
+    .pipe(sync.stream());
 };
 
 export const sprite = () => {
   return gulp
-    .src('src/assets/icons/sprite/*.svg')
+    .src('src/icons/sprite/*.svg')
     .pipe(
       svgmin({
         plugins: [
@@ -73,7 +72,8 @@ export const sprite = () => {
       }),
     )
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/icons'))
+    .pipe(sync.stream());
 };
 
 export const style = () => {
@@ -86,7 +86,7 @@ export const style = () => {
     .pipe(minify())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
-    .pipe(server.stream());
+    .pipe(sync.stream());
 };
 
 export const scripts = () => {
@@ -101,20 +101,16 @@ export const scripts = () => {
         suffix: '.min',
       }),
     )
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+    .pipe(sync.stream());
 };
 
 export const html = () => {
-  return gulp.src('src/*.html').pipe(plumber()).pipe(gulp.dest('build'));
+  return gulp.src('src/*.html').pipe(plumber()).pipe(gulp.dest('build')).pipe(sync.stream());
 };
 
-export const refresh = (done) => {
-  server.reload();
-  done();
-};
-
-export const watch = () => {
-  server.init({
+export const server = () => {
+  sync.init({
     server: 'build/',
     notify: false,
     open: true,
@@ -122,15 +118,18 @@ export const watch = () => {
     ui: false,
     port: 9999,
   });
+};
 
-  gulp.watch('src/assets/img/**/*', gulp.series(images, refresh));
-  gulp.watch('src/assets/icons/sprite/*.svg', gulp.series(sprite, refresh));
+export const watch = () => {
+  gulp.watch('src/**/*.html', gulp.series(html));
   gulp.watch('src/sass/**/*.scss', gulp.series(style));
-  gulp.watch('src/js/**/*.js', gulp.series(scripts, refresh));
-  gulp.watch('src/**/*.html', gulp.series(html, refresh));
+  gulp.watch('src/js/**/*.js', gulp.series(scripts));
+  gulp.watch('src/img/**/*', gulp.series(images));
+  gulp.watch('src/icons/sprite/*.svg', gulp.series(sprite));
+  gulp.watch(['src/fonts/**/*.{woff,woff2}', 'src/img/*.webp', 'src/js/*'], gulp.series(copy));
 };
 
 export default gulp.series(
-  gulp.parallel(clean, html, style, scripts, images, sprite, copy),
-  gulp.series(watch),
+  gulp.parallel(copy, images, sprite, style, scripts, html),
+  gulp.parallel(watch, server),
 );

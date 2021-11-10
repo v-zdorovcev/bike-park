@@ -21,9 +21,25 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -d 'project' ]; then cd project && npm install; else echo 'Skip. The project directory does not exist';
-          if [ -d 'template' ]; then cd template && npm install; else echo 'Skip. The template directory does not exist'; fi
+          if [ -d 'project' ]; then
+            cd project && npm install;
+          else
+            echo 'Skip. The project directory does not exist'
+
+          if [ -d 'template' ]; then
+            cd template && npm install;
+          else
+            echo 'Skip. The template directory does not exist';
+          fi
       - name: Run checks
         run: |
-          if [ -d 'project' ]; then cd project && npm test && npm run eslint; else echo 'Skip. The project directory does not exist';
-          if [ -d 'template' ]; then cd template && npm test && npm run eslint; else echo 'Skip. The template directory does not exist'; fi
+          if [ -d 'project' ]; then
+            cd project && npm test && npm run eslint;
+          else
+            echo 'Skip. The project directory does not exist'
+
+          if [ -d 'template' ]; then
+            cd template && npm test && npm run eslint;
+          else
+            echo 'Skip. The template directory does not exist';
+          fi

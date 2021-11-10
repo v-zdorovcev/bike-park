@@ -30,7 +30,7 @@ jobs:
       - name: Run checks for template directory
         run: |
           if [ -d 'template' ]; then
-            cd template && npm test && npm run eslint;
+            cd template && npm test;
           else
             echo 'Skip. The template directory does not exist';
           fi

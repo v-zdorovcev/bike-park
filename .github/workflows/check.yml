@@ -19,6 +19,22 @@ jobs:
       - uses: actions/checkout@master
         name: Checkout
 
+      - name: Install dependencies for template directory
+        run: |
+          if [ -d 'template' ]; then
+             cd template && npm install;
+           else
+             echo 'Skip. The template directory does not exist';
+           fi
+
+      - name: Run checks for template directory
+        run: |
+          if [ -d 'template' ]; then
+            cd template && npm test && npm run eslint;
+          else
+            echo 'Skip. The template directory does not exist';
+          fi
+
       - name: Install dependencies for project directory
         run: |
           if [ -d 'project' ]; then
@@ -33,20 +49,4 @@ jobs:
             cd project && npm test && npm run eslint;
           else
             echo 'Skip. The project directory does not exist';
-          fi
-
-      - name: Install dependencies for template directory
-        run: |
-          if [ -d 'template' ]; then
-             cd template && npm install;
-           else
-             echo 'Skip. The template directory does not exist';
-           fi
-
-      - name: Run checks for project directory
-        run: |
-          if [ -d 'template' ]; then
-            cd template && npm test && npm run eslint;
-          else
-            echo 'Skip. The template directory does not exist';
           fi

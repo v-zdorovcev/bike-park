@@ -7,11 +7,16 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "gulp default"
+    "start": "gulp default",
+    "validate": "html-validate build/**/*.html",
+    "stylelint": "stylelint '**/*.scss' ",
+    "editorconfig": "editorconfig-checker",
+    "lint": "npm run editorconfig && npm run stylelint && npm run validate"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
+    "editorconfig-checker": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
@@ -24,8 +29,12 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^8.0.0",
     "gulp-uglify": "^3.0.2",
+    "html-validate": "^6.1.0",
     "postcss": "^8.3.11",
     "postcss-object-fit-images": "^1.1.2",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recommended-scss": "^5.0.1"
   }
 }

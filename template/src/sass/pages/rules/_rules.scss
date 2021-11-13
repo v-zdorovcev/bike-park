@@ -1,0 +1,35 @@
+.rules {
+  margin-top: 35px;
+  .container {
+    padding: 60px 40px 70px;
+    background: #F2F4F7;
+    border-radius: 20px;
+  }
+}
+
+.rules__rent {
+  margin-top: 42px;
+}
+
+.rules__wrapper {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules__item {
+  width: 360px;
+}
+
+.rules__wrapper .rules__item .rules__descr {
+  margin-top: 7px;
+}
+
+.rules__compensation {
+  margin-top: 40px;
+}
+
+.rules__compensation .rules__descr {
+  margin-top: 22px;
+  max-width: 760px;
+}

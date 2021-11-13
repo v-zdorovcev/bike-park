@@ -1,0 +1,118 @@
+.contacts {
+  .container {
+    padding: 60px 40px 70px;
+    background: #F2F4F7;
+    border-radius: 20px;
+  }
+}
+
+.contacts__offset {
+    margin-top: 30px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+div.contacts__email, div.contacts__tel {
+    margin-top: 30px;
+}
+
+a.contacts__tel, a.contacts__email {
+  &:hover {
+    text-decoration: none;
+    color: #14233D;
+  }
+}
+
+.contacts__form {
+  width: 560px;
+}
+
+.contacts__form .feed-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__form .feed-form .name, .tel {
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #DDE3EB;
+  color: #737B98;
+}
+
+.contacts__form .feed-form .name {
+  margin-top: 30px;
+}
+
+.contacts__form .feed-form .custom-checkbox {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.contacts__form .feed-form .custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #DDE3EB;
+    border-radius: 10px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background: #fff;
+  }
+}
+
+.contacts__form .feed-form .custom-checkbox:checked+label::before {
+  border-color: #297FFF;
+  background-color: #297FFF;
+  background-image: url("../icons/checked.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacts__checkbox {
+  margin-top: 20px;
+}
+
+.contacts__data {
+  margin-bottom: 0;
+  &:hover {
+    color: #14233D;
+    text-decoration: none;
+  }
+}
+
+.contacts__btn {
+  margin-top: 12px;
+  min-height: 60px;
+  background: #297FFF;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contacts__maps {
+  margin-top: 60px;
+  width: 100%;
+  height: 595px;
+  border: none;
+  border-radius: 20px;
+}
+

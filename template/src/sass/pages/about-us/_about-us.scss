@@ -1,0 +1,26 @@
+.about-us {
+  .container {
+      padding: 60px 40px 70px;
+      background: #F2F4F7;
+      border-radius: 20px;
+  }
+}
+
+.about-us__offset {
+    margin-top: 35px;
+}
+
+.about-us__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 37px;
+}
+
+.about-us__img {
+  width: 560px;
+  img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+  }
+}

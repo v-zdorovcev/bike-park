@@ -1,5 +1,4 @@
 .rules {
-  margin-top: 35px;
   .container {
     padding: 60px 40px 70px;
     background: #F2F4F7;
@@ -7,8 +6,29 @@
   }
 }
 
+.rules--offset {
+  margin-top: 35px;
+}
+
 .rules__rent {
   margin-top: 42px;
+}
+
+.rules__title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #14233D;
+}
+
+.rules__subtitle {
+  color: #ABB1C5;
+  font-size: 16px;
+}
+
+.rules__text {
+  font-size: 18px;
+  line-height: 140%;
+  color: #14233D;
 }
 
 .rules__wrapper {

@@ -6,8 +6,14 @@
   }
 }
 
-.where-to-ride-offset {
+.where-to-ride--offset {
   margin-top: 35px;
+}
+
+.where-to-ride__subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  color: #14233D;
 }
 
 .where-to-ride__main-place {
@@ -19,6 +25,13 @@
   max-width: 760px;
 }
 
+.where-to-ride__text {
+  font-size: 18px;
+  line-height: 140%;
+  color: #14233D;
+  margin-bottom: 5px;
+}
+
 .where-to-ride__wrapper {
   display: flex;
   justify-content: space-between;
@@ -28,51 +41,60 @@
   margin-top: 20px;
 }
 
+.where-to-ride__gallery-wrapper .where-to-ride__img {
+  width: 360px;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
 .where-to-ride__second-place {
   margin-top: 27px;
 }
 
-.where-to-ride__wrapper-offset {
+.where-to-ride__wrapper--offset {
   margin-top: 27px;
 }
 
 .where-to-ride__second-place .where-to-ride__descr {
-    margin-top: 7px;
-    max-width: 560px;
+  margin-top: 7px;
+  max-width: 560px;
 }
 
 .where-to-ride__second-place .where-to-ride__img {
     width: 559px;
     img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 20px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
     }
 }
 
 .where-to-ride__other-locations {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
-.where-to-ride__other-locations .where-to-ride__wrapper-offset {
-    margin-top: 27px;
+.where-to-ride__other-locations .where-to-ride__item {
+  width: 260px;
 }
 
-.where-to-ride__other-locations .where-to-ride__wrapper-offset .where-to-ride__item {
-    width: 260px;
-}
-
-.where-to-ride__other-locations .where-to-ride__wrapper-offset .where-to-ride__item .where-to-ride__img {
+.where-to-ride__other-locations .where-to-ride__item .where-to-ride__img {
     width: 260px;
     img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
     }
 }
 
-.where-to-ride__other-locations .where-to-ride__wrapper-offset .where-to-ride__item .where-to-ride__descr {
-    margin-top: 30px;
+.where-to-ride__other-locations .where-to-ride__item .where-to-ride__descr {
+  margin-top: 30px;
+}
+
+.where-to-ride__other-locations .where-to-ride__item .where-to-ride__descr .where-to-ride__text {
+  font-size: 16px;
 }
 
 

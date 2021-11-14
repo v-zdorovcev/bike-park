@@ -8,85 +8,91 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo"><img src="icons/logo.svg" alt="logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Аренда</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Где кататься</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <button class="account"></button>
-            <button class="feedback">Обратная связь</button>
-            <div class="clock">12:00</div>
-        </div>
-    </header>
-
-    <section class="contacts contacts__offset">
-      <div class="container">
-        <h2 class="title">Контакты</h2>
-        <div class="contacts__wrapper">
-          <div class="contacts__information">
-            <div class="text text-dg">Номер телефона</div>
-            <a href="tel:+999999999" class="text text-w600 text-fs20 contacts__tel">999 999 999</a>
-            <div class="text text-dg contacts__email">E-mail</div>
-            <a href="mailto:info@bikerental.ae" class="text text-fs18 contacts__email">info@bikerental.ae</a>
-            <div class="text text-dg contacts__tel">Адрес шоурума</div>
-            <address class="text text-fs18">Страна А, город Б, ул. АААА</address>
-          </div>
-          <div class="contacts__form">
-            <div class="text text-dg">Оставить заявку</div>
-            <div class="text text-w600 text-fs20">Остались вопросы? Свяжитесь с нами</div>
-            <form class="feed-form" action="#">
-              <input name="name" class="name" required type="text" placeholder="Имя*">
-              <input name="tel" class="tel" required type="tel" pattern="8[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Номер телефона*">
-              <div class="contacts__checkbox">
-                <input required type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-                <label for="happy"><a href="#" class="text contacts__data">Согласие на обработку персональных данных</a></label>
-              </div>
-              <button class="contacts__btn">Отправить</button>
-            </form>
-          </div>
-        </div>
-        <iframe class="contacts__maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8646.831454817238!2d54.539023475430504!3d24.327508535558405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1636642351658!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </section>
-
-    <footer class="footer footer-mt120">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__item">
-            <a href="#" class="footer__link">Аренда велосипедов</a>
-            <ul class="footer__categories">
-              <li><a href="#" class="footer__sublink">Алюминий</a></li>
-              <li><a href="#" class="footer__sublink">Карбон</a></li>
-              <li><a href="#" class="footer__sublink">Горные/городские</a></li>
-              <li><a href="#" class="footer__sublink">Городские эконом</a></li>
+  <header class="header">
+    <div class="container">
+        <a href="#" class="header__logo"><img src="icons/logo.svg" alt="logo"></a>
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">О нас</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Аренда</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Где кататься</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
             </ul>
-          </div>
-          <div class="footer__item">
-            <ul class="footer__links">
-              <li><a href="#" class="footer__link">Правила</a></li>
-              <li><a href="#" class="footer__link">Отзывы</a></li>
-              <li><a href="#" class="footer__link">Контакты</a></li>
-              <li><a href="#" class="footer__link">Обратная связь</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__wrapper">
-          <p class="text text-fs18 text-white">© BikePark, 2021</p>
-          <a href="#" class="footer__link">Политика конфиденциальности</a>
-          <ul class="socials">
-            <li><a href="#" class="social"><img src="icons/facebook.svg" alt="facebook"></a></li>
-            <li><a href="#" class="social"><img src="icons/instagram.svg" alt="instagram"></a></li>
-          </ul>
+        </nav>
+        <button class="header__account"></button>
+        <button class="header__feedback">Обратная связь</button>
+        <div class="header__clock">12:00</div>
+    </div>
+  </header>
+
+  <section class="contacts contacts--offset">
+    <div class="container">
+      <h2 class="title">Контакты</h2>
+      <div class="contacts__wrapper">
+        <ul class="contacts__information">
+          <li class="contacts__item">
+            <div class="contacts__text">Номер телефона</div>
+            <a href="tel:+999999999" class="contacts__tel">999 999 999</a>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__text">E-mail</div>
+            <a href="mailto:info@bikerental.ae" class="contacts__email">info@bikerental.ae</a>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__text">Адрес шоурума</div>
+            <address class="contacts__address">Страна А, город Б, ул. АААА</address>
+          </li>
+        </ul>
+        <div class="contacts__form">
+          <div class="contacts__text">Оставить заявку</div>
+          <div class="contacts__question">Остались вопросы? Свяжитесь с нами</div>
+          <form class="contacts__feed-form" action="#">
+            <input name="name" class="contacts__name" required type="text" placeholder="Имя*">
+            <input name="tel" class="contacts__tel" required type="tel" pattern="8[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Номер телефона*">
+            <div class="contacts__checkbox">
+              <input required type="checkbox" class="contacts__custom-checkbox" id="happy" name="happy" value="yes">
+              <label for="happy"><a href="#" class="contacts__data">Согласие на обработку персональных данных</a></label>
+            </div>
+            <button class="contacts__btn">Отправить</button>
+          </form>
         </div>
       </div>
-    </footer>
+      <iframe class="contacts__maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8646.831454817238!2d54.539023475430504!3d24.327508535558405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1636642351658!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer footer--offset">
+    <div class="container">
+    <div class="footer__wrapper">
+        <div class="footer__item">
+        <a href="#" class="footer__link">Аренда велосипедов</a>
+        <ul class="footer__categories">
+            <li><a href="#" class="footer__sublink">Алюминий</a></li>
+            <li><a href="#" class="footer__sublink">Карбон</a></li>
+            <li><a href="#" class="footer__sublink">Горные/городские</a></li>
+            <li><a href="#" class="footer__sublink">Городские эконом</a></li>
+        </ul>
+        </div>
+        <div class="footer__item">
+        <ul class="footer__links">
+            <li class="footer__item"><a href="#" class="footer__link">Правила</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Отзывы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Обратная связь</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="footer__wrapper">
+        <p class="footer__text">© BikePark, 2021</p>
+        <a href="#" class="footer__text">Политика конфиденциальности</a>
+        <ul class="footer__list-socials">
+        <li><a href="#" class="footer__link-social"><img src="icons/facebook.svg" alt="facebook"></a></li>
+        <li><a href="#" class="footer__link-social"><img src="icons/instagram.svg" alt="instagram"></a></li>
+        </ul>
+    </div>
+    </div>
+  </footer>
 
 
     <script src="js/bundle.js"></script>

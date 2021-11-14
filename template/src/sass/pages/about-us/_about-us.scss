@@ -1,13 +1,13 @@
 .about-us {
   .container {
-      padding: 60px 40px 70px;
-      background: #F2F4F7;
-      border-radius: 20px;
+    padding: 60px 40px 70px;
+    background: #F2F4F7;
+    border-radius: 20px;
   }
 }
 
-.about-us__offset {
-    margin-top: 35px;
+.about-us--offset {
+  margin-top: 35px;
 }
 
 .about-us__wrapper {
@@ -16,11 +16,22 @@
   margin-top: 37px;
 }
 
+.about-us__desc {
+  max-width: 560px;
+}
+
+.about-us__text {
+  font-size: 18px;
+  color: #14233D;
+  margin-bottom: 5px;
+  line-height: 140%;
+}
+
 .about-us__img {
   width: 560px;
   img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
   }
 }

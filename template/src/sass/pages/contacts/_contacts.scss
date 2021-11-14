@@ -6,7 +6,7 @@
   }
 }
 
-.contacts__offset {
+.contacts--offset {
     margin-top: 30px;
 }
 
@@ -16,27 +16,64 @@
   margin-top: 32px;
 }
 
-div.contacts__email, div.contacts__tel {
-    margin-top: 30px;
+.contacts__information {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
 }
 
-a.contacts__tel, a.contacts__email {
+.contacts__item {
+  margin-bottom: 30px;
+}
+
+.contacts__text {
+  color: #abb1c5;
+  margin-bottom: 10px;
+  line-height: 140%;
+}
+
+.contacts__information .contacts__tel {
+  font-size: 20px;
+  font-weight: 600;
+  color: #14233D;
   &:hover {
     text-decoration: none;
     color: #14233D;
   }
 }
 
+.contacts__email {
+  font-size: 18px;
+  color: #14233D;
+  &:hover {
+    text-decoration: none;
+    color: #14233D;
+  }
+}
+
+.contacts__address {
+  font-size: 18px;
+  color: #14233D;
+}
+
 .contacts__form {
   width: 560px;
 }
 
-.contacts__form .feed-form {
+.contacts__question {
+  font-weight: 600;
+  font-size: 20px;
+  color: #14233D;
+}
+
+.contacts__form .contacts__feed-form {
   display: flex;
   flex-direction: column;
 }
 
-.contacts__form .feed-form .name, .tel {
+.contacts__form .contacts__feed-form .contacts__name, .contacts__form .contacts__feed-form .contacts__tel {
+  font-weight: 500;
+  font-size: 18px;
   height: 60px;
   margin-top: 20px;
   border-radius: 15px;
@@ -45,11 +82,11 @@ a.contacts__tel, a.contacts__email {
   color: #737B98;
 }
 
-.contacts__form .feed-form .name {
+.contacts__form .contacts__feed-form .contacts__name {
   margin-top: 30px;
 }
 
-.contacts__form .feed-form .custom-checkbox {
+.contacts__form .contacts__feed-form .contacts__custom-checkbox {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -57,7 +94,7 @@ a.contacts__tel, a.contacts__email {
   opacity: 0;
 }
 
-.contacts__form .feed-form .custom-checkbox+label {
+.contacts__form .contacts__feed-form .contacts__custom-checkbox+label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -78,7 +115,7 @@ a.contacts__tel, a.contacts__email {
   }
 }
 
-.contacts__form .feed-form .custom-checkbox:checked+label::before {
+.contacts__form .contacts__feed-form .contacts__custom-checkbox:checked+label::before {
   border-color: #297FFF;
   background-color: #297FFF;
   background-image: url("../icons/checked.png");
@@ -91,7 +128,7 @@ a.contacts__tel, a.contacts__email {
 }
 
 .contacts__data {
-  margin-bottom: 0;
+  color: #14233D;
   &:hover {
     color: #14233D;
     text-decoration: none;

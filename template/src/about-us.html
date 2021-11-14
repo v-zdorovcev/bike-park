@@ -10,59 +10,59 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="#" class="logo"><img src="icons/logo.svg" alt="logo"></a>
+            <a href="#" class="header__logo"><img src="icons/logo.svg" alt="logo"></a>
             <nav>
-                <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Аренда</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Где кататься</a></li>
-                    <li><a href="#">Контакты</a></li>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">О нас</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Аренда</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Где кататься</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
                 </ul>
             </nav>
-            <button class="account"></button>
-            <button class="feedback">Обратная связь</button>
-            <div class="clock">12:00</div>
+            <button class="header__account"></button>
+            <button class="header__feedback">Обратная связь</button>
+            <div class="header__clock">12:00</div>
         </div>
     </header>
 
-	<section class="about-us about-us__offset">
+	<section class="about-us about-us--offset">
         <div class="container">
             <h2 class="title">О нас</h2>
             <div class="about-us__wrapper">
                 <div class="about-us__desc">
-                    <p class="text text-fs18 text-w560">
+                    <p class="about-us__text">
                         Товарищи! постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
                     </p>
-                    <p class="text text-fs18 text-w560">
+                    <p class="about-us__text">
                         Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении.
                     </p>
                 </div>
                 <div class="about-us__img">
-                    <img src="img/about-us/bikes.jpg" loading="lazy" alt="bikes">
+                    <img src="img/about-us/bikes.jpg" alt="bikes">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="review review-mt35">
+    <section class="review review--offset">
 		  <div class="container">
                 <h2 class="subtitle">Отзывы</h2>
             <div class="review__wrapper">
             <div class="review__item">
-                <p class="text text-mb50">
+                <p class="review__text">
                 Безусловно, семантический разбор внешних противодействий способствует повышению качества вывода текущих активов. противодействий способствует повышению качества вывода текущих активов.</p>
                 <p class="review__author">Александр Н.</p>
             </div>
             <div class="review__item">
-                <p class="text text-mb50">
+                <p class="review__text">
                 Безусловно, семантический разбор внешних противодействий способствует повышению качества вывода текущих активов.
                 противодействий способствует повышению качества вывода текущих активов
                 противодействий способствует повышению качества
                 <p class="review__author">Александр Н.</p>
             </div>
             <div class="review__item">
-                <p class="text text-mb50">
+                <p class="review__text">
                 Безусловно, семантический разбор внешних противодействий способствует повышению качества вывода текущих активов.
                 противодействий способствует повышению качества вывода текущих активов
                 противодействий способствует повышению качества
@@ -70,7 +70,7 @@
             </div>
             </div>
             <div class="review__dots">
-            <div class="review__dot review__dot-active"></div>
+            <div class="review__dot review__dot--active"></div>
             <div class="review__dot"></div>
             <div class="review__dot"></div>
             <div class="review__dot"></div>
@@ -78,36 +78,36 @@
         </div>
     </section>
 
-    <footer class="footer footer-mt120">
-        <div class="container">
-        <div class="footer__wrapper">
-            <div class="footer__item">
-            <a href="#" class="footer__link">Аренда велосипедов</a>
-            <ul class="footer__categories">
-                <li><a href="#" class="footer__sublink">Алюминий</a></li>
-                <li><a href="#" class="footer__sublink">Карбон</a></li>
-                <li><a href="#" class="footer__sublink">Горные/городские</a></li>
-                <li><a href="#" class="footer__sublink">Городские эконом</a></li>
-            </ul>
-            </div>
-            <div class="footer__item">
-            <ul class="footer__links">
-                <li><a href="#" class="footer__link">Правила</a></li>
-                <li><a href="#" class="footer__link">Отзывы</a></li>
-                <li><a href="#" class="footer__link">Контакты</a></li>
-                <li><a href="#" class="footer__link">Обратная связь</a></li>
-            </ul>
-            </div>
-        </div>
-        <div class="footer__wrapper">
-            <p class="text text-fs18 text-white">© BikePark, 2021</p>
-            <a href="#" class="footer__link">Политика конфиденциальности</a>
-            <ul class="socials">
-            <li><a href="#" class="social"><img src="icons/facebook.svg" alt="facebook"></a></li>
-            <li><a href="#" class="social"><img src="icons/instagram.svg" alt="instagram"></a></li>
-            </ul>
-        </div>
-        </div>
+    <footer class="footer footer--offset">
+      <div class="container">
+      <div class="footer__wrapper">
+          <div class="footer__item">
+          <a href="#" class="footer__link">Аренда велосипедов</a>
+          <ul class="footer__categories">
+              <li><a href="#" class="footer__sublink">Алюминий</a></li>
+              <li><a href="#" class="footer__sublink">Карбон</a></li>
+              <li><a href="#" class="footer__sublink">Горные/городские</a></li>
+              <li><a href="#" class="footer__sublink">Городские эконом</a></li>
+          </ul>
+          </div>
+          <div class="footer__item">
+          <ul class="footer__links">
+              <li class="footer__item"><a href="#" class="footer__link">Правила</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Отзывы</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Обратная связь</a></li>
+          </ul>
+          </div>
+      </div>
+      <div class="footer__wrapper">
+          <p class="footer__text">© BikePark, 2021</p>
+          <a href="#" class="footer__text">Политика конфиденциальности</a>
+          <ul class="footer__list-socials">
+          <li><a href="#" class="footer__link-social"><img src="icons/facebook.svg" alt="facebook"></a></li>
+          <li><a href="#" class="footer__link-social"><img src="icons/instagram.svg" alt="instagram"></a></li>
+          </ul>
+      </div>
+      </div>
     </footer>
 
 

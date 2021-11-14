@@ -6,7 +6,7 @@
   }
 }
 
-.footer-mt120 {
+.footer--offset{
   margin-top: 120px;
 }
 
@@ -20,6 +20,7 @@
 }
 
 .footer__categories {
+  padding-left: 0;
   margin-bottom: 0;
   list-style-type: none;
   margin-top: 26px;
@@ -29,9 +30,10 @@
   display: flex;
   margin-bottom: 0;
   list-style-type: none;
-  li {
-    margin-left: 48px;
-  }
+}
+
+.footer__links .footer__item {
+  margin-left: 48px;
 }
 
 .footer__sublink {
@@ -54,12 +56,19 @@
   }
 }
 
-.socials {
+.footer__text {
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 140%;
+  font-size: 18px;
+}
+
+.footer__list-socials {
   display: flex;
   list-style-type: none;
   margin-bottom: 0;
 }
 
-.social {
+.footer__link-social {
   margin-left: 45px;
 }

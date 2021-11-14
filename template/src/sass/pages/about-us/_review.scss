@@ -6,6 +6,10 @@
   }
 }
 
+.review--offset {
+  margin-top: 35px;
+}
+
 .review__wrapper {
   margin-top: 35px;
   display: flex;
@@ -15,10 +19,16 @@
 .review__item {
   width: 360px;
   min-height: 301px;
-  padding: 25px 24px;
+  padding: 25px 24px 70px;
   background: #fff;
   border-radius: 15px;
   position: relative;
+}
+
+.review__text {
+  color: #14233D;
+  margin-bottom: 5px;
+  line-height: 140%;
 }
 
 .review__author {
@@ -54,10 +64,6 @@
   margin: 0 20px;
 }
 
-.review__dot-active {
+.review__dot--active {
   background: #297FFF;
-}
-
-.review-mt35 {
-  margin-top: 35px;
 }

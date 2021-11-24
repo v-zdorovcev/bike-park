@@ -15,9 +15,9 @@
 }
 
 .rules__title {
-  font-weight: 600;
-  font-size: 28px;
   color: #14233D;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .rules__subtitle {
@@ -26,19 +26,24 @@
 }
 
 .rules__text {
+  color: #14233D;
   font-size: 18px;
   line-height: 140%;
-  color: #14233D;
 }
 
 .rules__wrapper {
-  margin-top: 22px;
   display: flex;
   justify-content: space-between;
+  margin-top: 22px;
 }
 
 .rules__item {
   width: 360px;
+}
+
+.rules__compensation .rules__descr {
+  max-width: 760px;
+  margin-top: 22px;
 }
 
 .rules__wrapper .rules__item .rules__descr {
@@ -49,7 +54,4 @@
   margin-top: 40px;
 }
 
-.rules__compensation .rules__descr {
-  margin-top: 22px;
-  max-width: 760px;
-}
+

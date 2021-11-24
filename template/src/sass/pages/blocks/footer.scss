@@ -1,6 +1,6 @@
 .footer {
-  background: #272934;
   padding: 55px 0;
+  background: #272934;
   .container {
     padding: 0 40px;
   }
@@ -14,16 +14,16 @@
   display: flex;
   justify-content: space-between;
   &:nth-child(2) {
-    margin-top: 45px;
     align-items: center;
+    margin-top: 45px;
   }
 }
 
 .footer__categories {
   padding-left: 0;
+  margin-top: 26px;
   margin-bottom: 0;
   list-style-type: none;
-  margin-top: 26px;
 }
 
 .footer__links {
@@ -46,10 +46,9 @@
 }
 
 .footer__link {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 18px;
   color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
   &:hover {
     color: #FFFFFF;
     text-decoration: none;
@@ -57,16 +56,16 @@
 }
 
 .footer__text {
-  color: #fff;
   margin-bottom: 5px;
-  line-height: 140%;
+  color: #fff;
   font-size: 18px;
+  line-height: 140%;
 }
 
 .footer__list-socials {
   display: flex;
-  list-style-type: none;
   margin-bottom: 0;
+  list-style-type: none;
 }
 
 .footer__link-social {

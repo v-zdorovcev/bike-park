@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies for project directory
         run: |
           if [ -d 'project/client' ]; then
-            cd project && npm install;
+            cd project/client && npm install;
           else
             echo 'Skip. The project directory does not exist';
           fi
@@ -46,7 +46,7 @@ jobs:
       - name: Run checks for project directory
         run: |
           if [ -d 'project/client' ]; then
-            cd project && npm test && npm run eslint;
+            cd project/client && npm test && npm run eslint;
           else
             echo 'Skip. The project directory does not exist';
           fi

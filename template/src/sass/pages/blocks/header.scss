@@ -1,0 +1,51 @@
+.header {
+  .container {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.header__nav-item {
+  margin: 0 20px;
+}
+
+.header__nav-link {
+  color: #14233D;
+  &:hover {
+      color: #297FFF;
+      text-decoration: none;
+  }
+}
+
+.header__account {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: url('../icons/account.svg') center no-repeat;
+}
+
+.header__feedback {
+  width: 200px;
+  min-height: 40px;
+  border: none;
+  background: #297FFF;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header__clock {
+  color: #14233D;
+  font-size: 37px;
+  font-weight: 700;
+}

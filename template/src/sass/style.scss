@@ -5,3 +5,31 @@
 // layout
 
 // blocks
+
+
+@import 'libs/bootstrap-reboot';
+@import "fonts";
+
+
+
+@import './pages/blocks/title';
+@import './pages/blocks/subtitle';
+@import './pages/blocks/header';
+@import './pages/blocks/footer';
+@import './pages/about-us/about-us';
+@import './pages/about-us/review';
+@import './pages/contacts/contacts';
+@import './pages/where-to-ride/where-to-ride';
+@import './pages/rules/rules';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+
